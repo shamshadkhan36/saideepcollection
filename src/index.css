@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-brand-dark bg-[#FAFAF8];
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c2c7cf;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9aa1ad;
+  }
+}
+
+/* Glassmorphism and decorative luxury gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F5A623 0%, #D98205 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.red-gradient-text {
+  background: linear-gradient(135deg, #F20D16 0%, #B9080F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-border-glow {
+  box-shadow: 0 0 15px rgba(245, 166, 35, 0.15);
+}
+
+/* Smooth image zoom effect on hover */
+.img-zoom-hover {
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.group:hover .img-zoom-hover {
+  transform: scale(1.06);
+}
